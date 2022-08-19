@@ -30,7 +30,7 @@
 
 </head>
 
-<body class="bg-black">
+<body class="bg-black" onload="myFunction()">
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top bg-black ">
@@ -260,6 +260,12 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    var preloader =document.getElementById('loader');
+    function myFunction(){
+      preloader.style.display = 'none';
+    }
+  </script>
 
 </body>
 
