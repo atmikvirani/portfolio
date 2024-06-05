@@ -29,6 +29,31 @@
   <link href="assets/css/style.css" rel="stylesheet">
 
 </head>
+<script>
+  const inquireButton = document.getElementById("submit-msg");
+    const form = document.getElementById("contact");
+
+    inquireButton.addEventListener("click", () => {
+        const subject = encodeURIComponent(form.subject.value);
+        const message = encodeURIComponent(form.message.value);
+
+        const email = "atmikvirani@gmail.com";
+        const sub = "Inquiry regarding a trip";
+        const body = `Destination: ${subject}%0A
+                      Pax Number: ${message}`;
+
+        const mailtoLink = `mailto:${email}?subject=${sub}&body=${body}`;
+
+        window.location.href = mailtoLink;
+    });
+</script>
+<style>
+  .class-details{
+    a:hover{
+      color:#0f0f0f;
+    }
+  }
+</style>
 
 <body class="bg-black" onload="myFunction()">
 
@@ -44,7 +69,7 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link  scrollto" href="#journal">Resume</a></li>
+          <li><a class="nav-link  scrollto" href="#education">Education</a></li>
           <!-- <li><a class="nav-link  scrollto" href="#portfolio">Portfolio</a></li> -->
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
@@ -59,15 +84,15 @@
 
     <div class="container">
       <div class="hero-content">
-        <h1>I'm <span class="typed" data-typed-items="Atmik Virani, Developer, Graphic Designer, Video Editor"></span>
+        <h1>I'm <span class="typed" data-typed-items="Atmik Virani"></span>
         </h1>
-        <p>Developer, Graphic Designer, Video Editor</p>
-
-        <ul class="list-unstyled list-social">
-          <a href="https://www.instagram.com/axm1k/"><i class="bi bi-instagram"></i></a>
-          <a href="https://twitter.com/Atmik_Virani"><i class="bi bi-twitter"></i></a>
+        <p>Student, Cloud Enthusiast, Web-Developer</p>
+        <b><i class="bi bi-pin-map" style="color:#4b4f50;position: relative;top:-30px;"> Jersey City, NJ</i></b>
+        <ul class="list-unstyled list-social" style="position: relative;top:-15px;">
+          <a href="https://www.linkedin.com/in/atmikvirani/"><i class="bi bi-linkedin"></i></a>
+          <a href="https://g.dev/atmikvirani"><i class="bi bi-google"></i></a>
           <a href="https://github.com/atmikvirani"><i class="bi bi-github"></i></a>
-          <a href="https://stackoverflow.com/users/19168976/atmik-virani"><i class="bi bi-stack-overflow"></i></a>
+          <a href="https://medium.com/@atmikvirani"><i class="bi bi-medium"></i></a>
         </ul>
       </div>
     </div>
@@ -93,8 +118,16 @@
           <div class="col-lg-7">
             <div class="about-descr">
 
-              <p class="p-heading">I am a Developer Surat based who loves clean, simple & logical functioning. I also
-                enjoy crafting brand identities, logos and Video Editing work. </p>
+              <p style="text-align: justify;">Greetings! I am a passionate and driven individual currently pursuing a
+                Master of
+                Science (MS) degree in Computer Science at <a href="https://www.montclair.edu/"><u>Montclair State
+                    University</u></a>. My journey in the world of
+                technology has been nothing short of exhilarating, and I am excited to share a glimpse of my
+                professional and academic pursuits with you.
+
+                If you share a passion for technology, innovation, or computer science, I'd love to connect with you.
+                Let's embark on this exciting journey together, exchange ideas, and collaborate on projects that have
+                the potential to shape the future.</p>
             </div>
 
           </div>
@@ -104,49 +137,52 @@
 
     <!-- ======= Journal Section ======= -->
 
-    <div id="journal" class="text-left paddsection">
+    <div class="text-left paddsection">
 
       <div class="container">
         <div class="section-title">
-          <h2 class="text-center" style="color:#c1c7c9;">RESUME</h2>
+          <h2 class="text-center" style="color:#c1c7c9;">Education</h2>
         </div>
       </div>
-      
+
       <div class="container">
         <div class="resume-block">
           <div class="row">
             <div class="row">
               <div class="col-lg-10 aos-init aos-animate pl-5" style="" data-aos="fade-up">
-                <h3 class="resume-title pb-1 style="color:#b8b8b8">Sumary</h3>
-                <div class="resume-item pb-0">
-                  <h4>Atmik Virani</h4>
-                  <p><em>
-                    A Bachelor of Computer Applications (BCA) student from CHARUSAT University with excellent academic background and diverse skillset. Working in Web, SQL and Android Development. I am well versed with Python, Java, C++, C, HTML, CSS,AngularJS, Bootstrap and basics of JavaScript.
-                    Other than Acedemics I am also familiar with different Softwares used for Graphic Designing And Video Editing.<br>for instance Affter Effects, Photoshop, Primere Pro, Illustrator, Lightroom.
+                <h3 class="resume-title pb-1 style=" color:#b8b8b8" id="education">Atmik Virani</h3>
+                <div class="resume-item pb-0" style="position: relative; top: -25px; bottom: -20px;">
+                  <p style="text-align: justify;"><em>
+                      A Master's student with excellent academic
+                      background and diverse skillset. Working in Web, SQL and Android Development. I am well versed
+                      with Python, Java, C++, C, HTML, CSS, AngularJS, Bootstrap and basics of JavaScript.
+                      Other than Acedemics I have also volunteered at <a href="https://na.baps.org/" style="color: rgb(255, 231, 231);"><u>BAPS Swaminarayan Sanstha</u></a> as Graphic Designer and Video Editor where I showcased my skills in Affter Effects, Da-Vinci Resolve, Photoshop, Primere Pro and Lightroom.
+                      Always open to learn new technology everyday which will add me knowledge and hands-on experience to excel my career.
                     </em>
                   </p>
                 </div>
-                <h3 class="resume-title"style="color:#b8b8b8">Education</h3>
-                <div class="resume-item">
-                  <h4>Undergraduate(Pursuing)</h4>
-                  <h5>2020 - 2023</h5>
-                  <p><em>CHARUSAT University, GJ (IN)</em></p>
-                  <p>Currently Pursuing Bachelor of Computer Applications at CHARUSAT University, Anand</p>
+                <h3 class="resume-title" style="color:#b8b8b8">Education</h3>
+                <hr style="position: relative; bottom: 16px;">
+                <div class="resume-item" style="position: relative; top: -15px;">
+                  <h5>Graduation - CS (Computer Science)</h5>
+                  <h4>2023 - Present</h4>
+                  <p style="position: relative; top: -17px;"><b><i>Montclair State University, NJ (US)</i></b></p>
+                  <p style="position: relative; top: -50px; text-align: justify">- Student at Montclair State University currently learning about Software Engineering, Database Systems and Machine Learning.<br>
+                   - Will learn about Computer Architecture, Data Structures, Principles of Secure Programming, Computer Algorithms and Analysis. <br>
+                   - Looking for intership and research opportunities.
+                  </p>
                 </div>
-                <div class="resume-item">
-                  <h4>Higher Elementary Schooling</h4>
-                  <h5>2018 - 2020</h5>
-                  <p><em>Shree Swaminrayan Gurukul International School, HYD, TN (IN)</em></p>
-                  <p>Completed My Higher Elementary Schooling through CBSE Board at Shree Swaminarayan Gurukul International School, Hyderabad</p>
+                <div class="resume-item" style="position: relative; bottom: 60px;">
+                  <h5>Undergraduation - BCA</h5>
+                  <h4>2020 - 2023</h4>
+                  <p style="position: relative; top: -17px;"><b><i>CHARUSAT University, GJ (IN)</i></b></p>
+                  <p style="position: relative; top: -50px; text-align: justify">- Bachelor's in Computer Applications completed at CHARUSAT University with a 9.19 CGPA. <br>
+                    - Engaged in various co-curricular activities during my academic journey such as participating in Hackathons and events like Ignite. <br> &emsp;I have also learned about Cloud Computing using various platform like GCP, AWS and Microsoft Azure. <br>
+                    - Developed a web application for Prayosha Solar using HTML, CSS, JavaScript, PHP, and MySQL as a part of my Undergraduation project.</p>
                 </div>
-                <div class="resume-item">
-                  <h4>Primary & Elementary Schooling</h4>
-                  <h5>2008 - 2018</h5>
-                  <p><em>Shree Swaminarayan Gurukul English Med. School, Surat, GJ (IN)</em></p>
-                  <p>Completed My Primary and Elementary Schooling through GSEB Board at Shree Swaminarayan Gurukul English Med. School, Surat</p>
-                </div>
+
               </div>
-            
+
             </div>
           </div>
         </div>
@@ -167,16 +203,18 @@
                 <h2 class="mb-30" style="color: #black; font-size:">GET IN TOUCH</h2>
 
                 <ul class="contact-details">
-                  <li><b><span style="color: #555f61">(+91) 635 919 8545</span></b></li>
-                  <li><b><span style="color: #555f61">atmikvirani@gmail.com</span></b></li>
+                  <li><b><span style="color: #555f61"><a href="tel:+12014927893" style="color:#555f61">+1 (201) 492 7893</a></span></b></li>
+                  
+                  <li><b><span style="color: #555f61"><a href="mailto:atmikvirani@gmail.com" style="color:#555f61">atmikvirani@gmail.com</a></span></b></li>
                 </ul>
                 <div class="socials-media" style="margin-left: 0px;">
                   <ul class="list-unstyled">
                     <li>
-                    <a href="https://www.instagram.com/axm1k/"><i class="bi bi-instagram"></i></a>
-                    <a href="https://twitter.com/Atmik_Virani"><i class="bi bi-twitter"></i></a>
-                    <a href="https://github.com/atmikvirani"><i class="bi bi-github"></i></a>
-                    <a href="https://stackoverflow.com/users/19168976/atmik-virani"><i class="bi bi-stack-overflow"></i></a>
+                      <a href="https://www.linkedin.com/in/atmikvirani/"><i class="bi bi-linkedin"></i></a>
+                      <a href="https://g.dev/atmikvirani"><i class="bi bi-google"></i></a>
+                      <a href="https://github.com/atmikvirani"><i class="bi bi-github"></i></a>
+                      <a href="https://medium.com/@atmikvirani"><i
+                          class="bi bi-medium"></i></a>
                     </li>
                   </ul>
                 </div>
@@ -185,7 +223,9 @@
             </div>
 
             <div class="col-lg-6">
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <form action="https://api.web3forms.com/submit" method="post" class="" id="contact">
+                <input type="hidden" name="access_key" value="f0e57508-e4d0-4fda-ac59-4bd6819d9e20">
+
                 <div class="row gy-3">
 
                   <div class="col-lg-6">
@@ -210,18 +250,13 @@
 
                   <div class="col-lg-12">
                     <div class="form-group">
-                      <textarea class="form-control" name="message" placeholder="Message" required></textarea>
+                      <textarea class="form-control" name="message" id="message" placeholder="Message" required></textarea>
                     </div>
                   </div>
 
-                  <div class="col-lg-12">
-                    <!-- <div class="loading">Loading</div>
-                    <div class="error-message"></div> -->
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-                  </div>
-
                   <div class="mt-0">
-                    <input type="submit" class="btn btn-defeault btn-send" value="Send message">
+                    <!-- <input type="submit" class="btn btn-defeault btn-send" value="Send message" id="submit-msg"> -->
+                    <button type="submit" class="btn btn-secondary" id="submit-msg">Inquire now</button>
                   </div>
 
                 </div>
@@ -238,11 +273,7 @@
   <div id="footer" class="text-center">
     <div class="container">
 
-      <p>&copy; Copyrights Atmik Virani. All rights reserved.</p>
-
-      <div class="credits" style="color: #c1c7c9">
-        Designed by AXM1K
-      </div>
+      <p style="margin: 10px;">&copy; <span id="website-year"></span><a href="https://www.linkedin.com/in/atmikvirani/"> <u style="color: azure;">Atmik Virani</u></a>. All rights reserved.</p>
 
     </div>
   </div><!-- End Footer -->
@@ -261,8 +292,8 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   <script>
-    var preloader =document.getElementById('loader');
-    function myFunction(){
+    var preloader = document.getElementById('loader');
+    function myFunction() {
       preloader.style.display = 'none';
     }
   </script>
@@ -270,3 +301,9 @@
 </body>
 
 </html>
+<script>
+  var d = new Date();
+  var n = d.getFullYear();
+  var year = document.getElementById("website-year")
+  year.innerHTML = n
+</script>
